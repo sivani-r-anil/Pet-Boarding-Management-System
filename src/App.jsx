@@ -5,14 +5,19 @@ import heroImg from './assets/hero.png'
 import './App.css'
 import AddPet from './components/AddPet'
 import ViewPets from './components/ViewPets'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-      <AddPet />
-      <ViewPets/>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<AddPet />} />
+          <Route path='/view' element={<ViewPets />} />
+        </Routes>
+      </BrowserRouter>
     </>
   )
 }
