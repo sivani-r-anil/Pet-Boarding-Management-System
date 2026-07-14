@@ -72,6 +72,7 @@ const AddPet = () => {
 
                                     <label className="form-label">Pet Type</label>
                                     <select className="form-control" name="petType" value={input.petType} onChange={inputHandler}>
+                                        <option value="select">Select pet Type</option>
                                         <option value="Dog">Cat</option>
                                         <option value="Cat">Dog</option>
                                         <option value="Rabbit">Rabbit</option>
